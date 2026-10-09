@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-document compliance review — Gianmarco Aiello</title>
+<meta name="description" content="An agentic pipeline that reviews entire project document folders against a 52-rule compliance catalogue: evidence-based verdicts, deterministic guardrails, timestamped audit trail.">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<div class="dotglow" id="dotglow" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="../index.html">G<em>.</em>ALLO</a>
+    <nav>
+      <a href="../index.html">Work</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:72px 0 56px">
+  <div class="wrap">
+    <p class="kicker">Case study /02 — in production</p>
+    <h1>CROSS-DOCUMENT<br>COMPLIANCE<br>REVIEW</h1>
+    <p class="lede">A public-sector healthcare compliance programme: each project requires a
+    multi-document compliance checklist reviewed by domain professionals. The engine
+    applies 52 rules and returns an auditable outcome per rule — the final verdict
+    is always computed by code.</p>
+    <div class="cs-meta">
+      <div>Role<b>Led design & delivery</b></div>
+      <div>Context<b>Public-sector healthcare</b></div>
+      <div>Status<b>In production</b></div>
+      <div>Scale<b>52 rules · 8 attachment types</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Context</span><span class="sec-rule"></span></div>
+    <div class="prose">
+      <p>Professionals read every project document by hand and filled in checklists —
+      sampling, not exhaustive; roughly <b>2 hours of shallow checks per project</b>.
+      Sampling meant real compliance risk stayed unread. An earlier pilot had failed:
+      unclarified exceptions accumulated in the tool and the experts lost trust in it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Approach</span><span class="sec-rule"></span></div>
+    <div class="prose">
+      <p>Process first, technology second. Before development: an exception inventory and
+      co-design with the domain experts. Then an agentic pipeline over project document
+      folders — intake (OCR, classification into attachment types, prompt-injection scan),
+      rule catalogue, execution, guardrails, aggregation. The operator keeps the same
+      working method and the same output file; what changes is who does the reading.</p>
+      <ul>
+        <li><b>Rule catalogue generated from the operators' own instructions</b>, reviewed
+        by a person, versioned — no retraining when instructions change.</li>
+        <li><b>~1/3 of the rules are deterministic</b> (no model): cheap, identical on every run.</li>
+        <li><b>Evidence-based judgement</b>: an OK requires a verifiable quote from the source;
+        low confidence or missing grounding becomes "to verify", never a silent pass.</li>
+        <li><b>Full traceability</b>: per-rule detail plus a timestamped event log — audit-ready.</li>
+      </ul>
+    </div>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 1040 496" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cdr-title cdr-desc" style="display:block;min-width:900px;width:100%;height:auto">
+      <title id="cdr-title">Cross-document compliance review</title>
+      <desc id="cdr-desc">Each project folder runs once through five engine stages: deterministic intake and rule catalogue, mixed rule execution with LLM judgement, deterministic guardrails and aggregation.</desc>
+      <defs>
+        <marker id="cdr-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#6B6B66"/></marker>
+        <marker id="cdr-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#D71921"/></marker>
+      </defs><rect x="248" y="96" width="792" height="240" rx="8" fill="rgba(20,20,20,0.02)" stroke="rgba(20,20,20,0.10)" stroke-width="0.8"/>
+<rect x="264" y="90" width="248" height="14" fill="#F2F2F0"/>
+<text x="268" y="101" font-family="'Space Mono',monospace" font-size="9" letter-spacing="0.14em" fill="rgba(20,20,20,0.40)">ENGINE · ONE RUN PER PROJECT</text>
+<line x1="184" y1="208" x2="288" y2="208" stroke="#6B6B66" stroke-width="1.2" marker-end="url(#cdr-arrow)"/>
+<rect x="210.1" y="184" width="51.8" height="16" fill="#F2F2F0"/><text x="236" y="196" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" letter-spacing="0.06em" fill="#6B6B66">UPLOAD</text>
+<line x1="464" y1="208" x2="512" y2="208" stroke="#6B6B66" stroke-width="1.2" marker-end="url(#cdr-arrow)"/>
+<line x1="704" y1="208" x2="752" y2="208" stroke="#6B6B66" stroke-width="1.2" marker-end="url(#cdr-arrow)"/>
+<path d="M 884,256 V 280 Q 884,288 876,288 H 620 Q 612,288 612,280 V 272" fill="none" stroke="#6B6B66" stroke-width="1.2" marker-end="url(#cdr-arrow)"/>
+<rect x="761.5" y="270" width="77.0" heine x1="704" y1="304" x2="752" y2="304" stroke="#6B6B66" stroke-width="1.2" marker-end="url(#cdr-arrow)"/>
+<path d="M 884,336 V 424 H 112 Q 104,424 104,416 V 240" fill="none" stroke="#6B6B66" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#cdr-arrow)"/>
+<rect x="356.45" y="404" width="247.1" height="16" fill="#F2F2F0"/><text x="480" y="416" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" letter-spacing="0.06em" fill="#6B6B66">COMPILED CHECKLIST · JSON · EVENT LOG</text>
+<rect x="24" y="176" width="160" height="64" fill="rgba(20,20,20,0.03)" stroke="rgba(20,20,20,0.30)" stroke-width="1"/>
+<text x="104.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">Operator</text>
+<text x="104.0" y="214" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">uploads the lot</text>
+<rect x="296" y="176" width="168" height="64" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/>
+<text x="380.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">1 · Intake</text>
+<text x="380.0" y="214" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">OCR · classify 8 types</text>
+<text x="380.0" y="230" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">prompt-injection scan</text>
+<rect x="520" y="176" width="184" height="64" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/>
+<text x="612.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">2 · Rule catalogue</text>
+<text x="612.0" y="214" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">52 rules · YAML</text>
+<text x="612.0" y="230" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">human-reviewed · versioned</text>
+<rect x="760" y="160" width="248" height="96" fill="rgba(215,25,33,0.10)" stroke="#D71921" stroke-width="1"/>
+<text x="884.0" y="182" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">3 · Rule execution</text>
+<text x="884.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">8 fact + 9 composite in code</text>
+<text x="884.0" y="214" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">35 interpretative via LLM</text>
+<text x="884.0" y="230" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">schema-forced answer + quote</text>
+<rect x="520" y="272" width="184" height="64" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/>
+<text x="612.0" y="294" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">4 · Guardrails</text>
+<text x="612.0" y="310" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">quote must exist in source</text>
+<text x="612.0" y="326" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">low confidence → to verify</text>
+<rect x="760" y="272" width="248" height="64" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/>
+<text x="884.0" y="294" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">5 · Aggregate + report</text>
+<text x="884.0" y="310" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">Excel checklist · JSON</text>
+<text x="884.0" y="326" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">per-rule detail · event log</text>
+<rect x="24" y="456" width="14" height="14" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/><text x="46" y="467" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">DETERMINISTIC</text><rect x="210" y="456" width="14" height="14" fill="rgba(215,25,33,0.10)" stroke="#D71921" stroke-width="1"/><text x="232" y="467" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">MODEL STEP / DECISION</text><rect x="470" y="456" width="14" height="14" fill="rgba(20,20,20,0.03)" stroke="rgba(20,20,20,0.30)" stroke-width="1"/><text x="492" y="467" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">EXTERNAL</text><line x1="600" y1="463" x2="650" y2="463" stroke="#6B6B66" stroke-width="1" stroke-dasharray="4,3"/><text x="660" y="467" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">ASYNC / RETURN</text>
+</svg>
+      <div class="diagram-cap">FIG.02 — five stages per project folder. Gray fill = deterministic code, red tint = the stage where the model judges, plain = external system. Dashed = return path to the operator.</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Results</span><span class="sec-rule"></span></div>
+    <div class="prose">
+      <ul>
+        <li>~2 hours of manual checks per project → <b>5–15 minutes</b>, with
+        <b>exhaustive coverage</b> instead of sampling.</li>
+        <li>The control is <b>stricter</b> than the manual one it replaced — not just faster.</li>
+      </ul>
+    </div>
+    <div class="carl" style="max-width:100%">
+      <div class="carl-row"><div class="carl-key">Lesson</div><div class="carl-body">Process first, technology second. The earlier pilot failed because unclarified exceptions accumulated in the tool and experts lost trust. After the exception inventory and co-design with domain experts — <b>before development</b> — trust in the output became a project metric, not an assumption.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Tech</span><span class="sec-rule"></span></div>
+    <div class="tags" style="margin-top:0">
+      <span class="tag">Agentic workflows</span><span class="tag">HITL</span>
+      <span class="tag">Prompt-injection defence</span><span class="tag">OCR</span>
+      <span class="tag">AI gateway · LiteLLM</span><span class="tag">Audit trail</span>
+      <span class="tag">Rule catalogue as data</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <span>© 2026 Gianmarco Aiello</span>
+    <a href="../index.html">← All work</a>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
