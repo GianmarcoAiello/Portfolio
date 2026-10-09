@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge intelligence — Gianmarco Aiello</title>
+<meta name="description" content="Collect scattered process knowledge, make workflows repeatable with AI harnesses, and govern everything through Git and MCP: natural-language contribution, monitored usage, no tech knowledge required.">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<div class="dotglow" id="dotglow" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="../index.html">G<em>.</em>ALLO</a>
+    <nav>
+      <a href="../index.html">Work</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:72px 0 56px">
+  <div class="wrap">
+    <p class="kicker">Case study /03 — in progress</p>
+    <h1>KNOWLEDGE<br>INTELLIGENCE</h1>
+    <p class="lede">Collect the process knowledge that lives in scattered folders, in employees'
+    heads and on their PCs — and make it work. AI harnesses like Claude Code accomplish
+    custom tasks and whole workflows through an MCP layer over Git repositories, turning
+    individual habits into repeatable, company-wide capability. In natural language,
+    with no tech knowledge required.</p>
+    <div class="cs-meta">
+      <div>Role<b>Designed the platform</b></div>
+      <div>Context<b>Enterprise environment</b></div>
+      <div>Status<b>In production — measurement window open</b></div>
+      <div>Stack<b>MCP · Git · Claude Code · LiteLLM</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Context</span><span class="sec-rule"></span></div>
+    <div class="prose">
+      <p>Process and document knowledge is scattered: some of it in shared folders, much of
+      it in employees' heads and on their PCs. Manual, repetitive work depends on the few
+      people who know how it is done; newcomers reconstruct it by asking around. And AI
+      assistants with no governance would access that knowledge without control or trail.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Approach</span><span class="sec-rule"></span></div>
+    <div class="prose">
+      <ul>
+        <li><b>Collect</b>: document and process knowledge is consolidated into two Git
+        repositories — a curated repo (processes, rules, skills) and a document repo.
+        Git is the system of record.</li>
+        <li><b>Connect</b>: the MCP layer is the connector between AI harnesses and that
+        data — search, read, propose. One open standard: any MCP-compatible harness works,
+        no custom plug-in per client.</li>
+        <li><b>Execute</b>: harnesses like Claude Code accomplish custom tasks and workflows.
+        <b>Crafted skills make them repeatable</b> and usable by anyone in the company,
+        newcomers included — people interact with Git in natural language, with no tech
+        knowledge.</li>
+        <li><b>Monitor</b>: every access recorded; AI gateway (e.g. LiteLLM) for model
+        routing, budgets and central usage data; evals measure quality over time.</li>
+        <li><b>Improve safely</b>: governed contribution — propose in natural language →
+        validate → pull request → human review → merge. No direct writes, even for trusted
+        builders: every change has an author, a diff and a reviewer.</li>
+      </ul>
+    </div>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 1040 496" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ki-title ki-desc" style="display:block;min-width:900px;width:100%;height:auto">
+      <title id="ki-title">Knowledge intelligence</title>
+      <desc id="ki-desc">An AI harness reaches governed company knowledge through an MCP layer over Git repositories; contribution flows through human review in natural language.</desc>
+      <defs>
+        <marker id="ki-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#6B6B66"/></marker>
+        <marker id="ki-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#D71921"/></marker>
+      </defs><line x1="216" y1="192" x2="376" y2="192" stroke="#D71921" stroke-width="1.4" marker-end="url(#ki-arrow-accent)"/>
+<rect x="235.45" y="168" width="121.1" height="16" fill="#F2F2F0"/><text x="296" y="180" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" letter-spacing="0.06em" fill="#D71921">TASKS · WORKFLOWS</text>
+<line x1="640" y1="192" x2="728" y2="192" stroke="#6B6B66" stroke-width="1.2" marker-end="url(#ki-arrow)"/>
+<rect x="658.1" y="168" width="51.8" height="16" fill="#F2F2F0"/><text x="684" y="180" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" letter-spacing="0.06em" fill="#6B6B66">VIA PR</text>
+<path d="M 120,224 V 288" fill="none" stroke="#6B6B66" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#ki-arrow)"/>
+<rect x="132" y="244" width="49.8" height="16" fill="#F2F2F0"/><text x="138" y="256" font-family="'Space Mono',monospace" font-size="10" letter-spacing="0.06em" fill="#6B6B66">MODELS</text>
+<path d="M 512,240 V 288" fill="none" stroke="#6B6B66" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#ki-arrow)"/>
+<rect x="524" y="260" width="43.5" height="16" fill="#F2F2F0"/><text x="530" y="272" font-family="'Space Mono',monospace" font-size="10" letter-spacing="0.06em" fill="#6B6B66">AUDIT</text>
+<rect x="24" y="160" width="192" height="64" fill="rgba(20,20,20,0.03)" stroke="rgba(20,20,20,0.30)" stroke-width="1"/>
+<text x="120.0" y="182" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">AI harness</text>
+<text x="120.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">Claude Code · any MCP client</text>
+<rect x="384" y="144" width="256" height="96" fill="rgba(215,25,33,0.10)" stroke="#D71921" stroke-width="1"/>
+<text x="512.0" y="166" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">MCP layer — the connector</text>
+<text x="512.0" y="182" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">search · read · propose</text>
+<text x="512.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">one server per domain · config</text>
+<text x="512.0" y="214" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">usage monitored</text>
+<rect x="736" y="160" width="280" height="64" fill="rgba(20,20,20,0.05)" stroke="#6B6B66" stroke-width="1"/>
+<text x="876.0" y="182" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">Git repositories</text>
+<text x="876.0" y="198" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">curated + documents · system of record</text>
+<rect x="24" y="288" width="192" height="64" fill="rgba(20,20,20,0.05)" stroke="#6B6B66" stroke-width="1"/>
+<text x="120.0" y="310" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">AI gateway</text>
+<text x="120.0" y="326" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">LiteLLM · routing · budgets</text>
+<rect x="384" y="288" width="256" height="64" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/>
+<text x="512.0" y="310" text-anchor="middle" font-family="'Space Mono',monospace" font-size="12" font-weight="700" fill="#141414">Governance</text>
+<text x="512.0" y="326" text-anchor="middle" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">IdP · logging · evals</text>
+<rect x="24" y="344" width="992" height="48" fill="#FAFAF8" stroke="#C9C9C4" stroke-width="1"/>
+<text x="520" y="373" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" letter-spacing="0.06em"><tspan fill="#6B6B66">CONTRIBUTION: </tspan><tspan fill="#141414">PROPOSE → VALIDATE → PULL REQUEST → </tspan><tspan fill="#D71921">HUMAN REVIEW</tspan><tspan fill="#6B6B66"> → MERGED · IN NATURAL LANGUAGE, NO TECH KNOWLEDGE</tspan></text>
+<rect x="24" y="424" width="14" height="14" fill="#E4E4E0" stroke="#C9C9C4" stroke-width="1"/><text x="46" y="435" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">DETERMINISTIC</text><rect x="210" y="424" width="14" height="14" fill="rgba(215,25,33,0.10)" stroke="#D71921" stroke-width="1"/><text x="232" y="435" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">MODEL STEP / DECISION</text><rect x="470" y="424" width="14" height="14" fill="rgba(20,20,20,0.03)" stroke="rgba(20,20,20,0.30)" stroke-width="1"/><text x="492" y="435" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">EXTERNAL</text><line x1="600" y1="431" x2="650" y2="431" stroke="#6B6B66" stroke-width="1" stroke-dasharray="4,3"/><text x="660" y="435" font-family="'Space Mono',monospace" font-size="10" fill="#6B6B66">ASYNC / GOVERNED</text>
+</svg>
+      <div class="diagram-cap">FIG.03 — platform view. Red tint = the connector and the human decision point, gray = deterministic infrastructure, plain = external systems. Dashed = governed / supporting paths.</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">What we expect to measure</span><span class="sec-rule"></span></div>
+    <div class="prose">
+      <ul>
+        <li><b>Repeatable workflows</b> that previously lived in one person's head or PC,
+        usable by anyone in the company — newcomers included.</li>
+        <li><b>Reduced manual and repetitive workload</b>: time freed for higher-value tasks.</li>
+        <li><b>Capacity to scale</b>: freed time goes into growth and new scenarios, not
+        into more of the same manual work.</li>
+        <li><b>Faster onboarding</b>: the process knowledge a newcomer needs is written down,
+        executable and reachable through one assistant.</li>
+        <li><b>Higher deliverable quality</b> through verifiable checks and a review trail.</li>
+      </ul>
+      <p>In production; numbers to be published when the measurement window closes.</p>
+    </div>
+    <div class="carl" style="max-width:100%">
+      <div class="carl-row"><div class="carl-key">Lesson</div><div class="carl-body">The hard part is not the AI — it is making knowledge <b>writable safely</b>. Crafted skills and governed contribution turn individual habits into company capability; retrieval alone would just make the old chaos faster.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Tech</span><span class="sec-rule"></span></div>
+    <div class="tags" style="margin-top:0">
+      <span class="tag">MCP</span><span class="tag">Claude Code</span>
+      <span class="tag">Skills in natural language</span><span class="tag">Git as system of record</span>
+      <span class="tag">AI gateway · LiteLLM</span><span class="tag">Access control</span>
+      <span class="tag">Observability</span><span class="tag">Evals</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <span>© 2026 Gianmarco Aiello</span>
+    <a href="../index.html">← All work</a>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
