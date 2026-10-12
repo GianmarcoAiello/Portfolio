@@ -109,10 +109,10 @@ h1 .cursor{display:inline-block;width:.55em;height:.9em;background:var(--accent)
 
 /* ---------- CAR-L table ---------- */
 .carl{border:1px solid var(--line)}
-.carl-row{display:grid;grid-template-columns:120px 1fr;border-bottom:1px solid var(--line);transition:background .15s}
+.carl-row{display:grid;grid-template-columns:168px 1fr;border-bottom:1px solid var(--line);transition:background .15s}
 .carl-row:last-child{border-bottom:none}
 .carl-row:hover{background:var(--surface)}
-.carl-key{padding:18px 20px;border-right:1px solid var(--line);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-dim);display:flex;align-items:flex-start;gap:8px}
+.carl-key{padding:18px 14px;border-right:1px solid var(--line);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);display:flex;align-items:flex-start;gap:8px;overflow-wrap:anywhere}
 .carl-key::before{content:"";width:8px;height:8px;border:1px solid var(--accent);margin-top:4px;flex:none;transition:background .15s}
 .carl-row:hover .carl-key::before{background:var(--accent)}
 .carl-body{padding:18px 24px;color:var(--ink-dim);font-size:14px}
