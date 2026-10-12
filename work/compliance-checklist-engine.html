@@ -12,7 +12,7 @@
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="../index.html">G<em>.</em>ALLO</a>
+    <a class="brand" href="../index.html">G.Aiello</a>
     <nav>
       <a href="../index.html">Work</a>
       <a href="../about.html">About</a>
@@ -23,35 +23,32 @@
 <main>
 <section class="hero" style="padding:72px 0 56px">
   <div class="wrap">
-    <p class="kicker">Case study /01 — in production</p>
+    <p class="kicker">Case study /01</p>
     <h1>COMPLIANCE<br>CHECKLIST<br>ENGINE</h1>
     <p class="lede">LLM judgement with auditable evidence. Reads invoices, purchase orders and bank
     transfers, answers each compliance checklist question with the evidence behind it,
     and returns structured results to the review platform the client already runs.</p>
     <div class="cs-meta">
-      <div>Role<b>Led design & delivery</b></div>
-      <div>Context<b>Consulting firm, enterprise</b></div>
-      <div>Status<b>~5 customers in production</b></div>
-      <div>Stack<b>AWS serverless + Bedrock</b></div>
+      <div>Role<b>Designed and led delivery</b></div>
+      <div>Status<b>Live</b></div>
     </div>
   </div>
+</section>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Context</span><span class="sec-rule"></span></div>
-    <div class="prose">
-      <p>Consultants manually checked invoices, purchase orders and bank transfers against
-      per-customer compliance checklists. The process was slow, non-repeatable, and its
-      quality depended entirely on which reviewer picked up the document. Five people
-      did this full time.</p>
-    </div>
+    <div class="sec-head"><span class="sec-num">01</span><div class="prose"><p>Consultants at a consulting firm with document-intensive, compliance-bound
+      workflows checked invoices, purchase orders and bank transfers against per-customer
+      compliance checklists — by hand. <b>Five people did this full time</b>, at whatever
+      pace each reviewer works: the process was slow, non-repeatable, and its quality
+      depended on who picked up the document.</p></div>
   </div>
 </section>
 
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Approach</span><span class="sec-rule"></span></div>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">What I built</span><span class="sec-rule"></span></div>
     <div class="prose">
       <p>One REST endpoint in, one queue out — the engine plugs into the client's existing
       review platform without changing their document workflow. Two small Lambda functions
@@ -127,20 +124,20 @@
         <li>5 active customers, 5 document types supported.</li>
       </ul>
     </div>
-    <div class="carl" style="max-width:100%">
-      <div class="carl-row"><div class="carl-key">Lesson</div><div class="carl-body">The hard part was not the LLM call — it was making the output <b>auditable</b>: every answer carries its evidence, and reviewers trust the checklist because they can verify any row in seconds.</div></div>
     </div>
   </div>
 </section>
 
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Tech</span><span class="sec-rule"></span></div>
-    <div class="tags" style="margin-top:0">
-      <span class="tag">AWS Lambda</span><span class="tag">SQS</span><span class="tag">Bedrock</span>
-      <span class="tag">S3</span><span class="tag">API Gateway</span><span class="tag">Python</span>
-      <span class="tag">Serverless</span><span class="tag">Prompt versioning</span>
-    </div>
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Lesson</span><span class="sec-rule"></span></div>
+    <div class="carl" style="max-width:100%">
+      <div class="carl-row"><div class="carl-key">Lesson</div><div class="carl-body">The hard part was not the LLM call — it was making the output <b>auditable</b>: every answer carries its evidence, and reviewers trust the checklist because they can verify any row in seconds.</div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <p class="builtwith"><b>Built with:</b> AWS Lambda, SQS, S3, API Gateway, Bedrock, Python, CloudWatch</p>
   </div>
 </section>
 </main>
